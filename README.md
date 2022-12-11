@@ -4,6 +4,6 @@ Here are my advent of code attempts. I've decided to use Python which I am unfam
 
 ## Challenges
 
-| Day | Challenge |
-| --- | --------- |
-|  1  | Done      |
+| Day | Challenge       |
+| --- | --------------- |
+|  1  | [Done](day1.py) |
