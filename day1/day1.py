@@ -8,9 +8,7 @@ with open('day1/input.txt') as file:
 
   for line in allLines:
     if line.strip():
-      num = int(line)
       currentCount += int(line)
-      currentCount
     else:
       if currentCount > highestCount:
         highestCount = currentCount
