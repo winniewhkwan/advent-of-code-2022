@@ -4,7 +4,8 @@ Here are my advent of code attempts. I've decided to use Python which I am unfam
 
 ## Challenges
 
-| Day       | Challenge            |
-|:---------:|:--------------------:|
-| [1](day1) | [Done](day1/day1.py) |
-| [2](day2) | [Done](day2/day2.py) |
+| Day       | Challenge              |
+|:---------:|:----------------------:|
+| [1](day1) | [Solved](day1/day1.py) |
+| [2](day2) | [Solved](day2/day2.py) |
+| [3](day3) | [Solved](day3/day3.py) |
