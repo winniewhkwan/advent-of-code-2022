@@ -10,3 +10,4 @@ Here are my advent of code attempts. I've decided to use Python which I am unfam
 | [2](day2) | [Solved](day2/day2.py) |
 | [3](day3) | [Solved](day3/day3.py) |
 | [4](day4) | [Solved](day4/day4.py) |
+| [5](day5) | [Solving](day5/day5.py) |
