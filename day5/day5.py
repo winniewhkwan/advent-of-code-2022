@@ -8,22 +8,25 @@ numStacks = 9
 
 with open('day5/input.txt') as file:
 	allLines = file.readlines()
-	stacks = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+	stacks = [''] * 9
 
 	allCrates = islice(allLines, 8)
 	for unsortedCrates in allCrates:
-		cratesArray = [ unsortedCrates[i : i + 4] for i in range(0, len(unsortedCrates), 4) ]
+		unsortedCratesArray = [ unsortedCrates[i : i + 4] for i in range(0, len(unsortedCrates), 4) ]
 
-		# DON'T USE ZIP
-		for crate, stack in zip(cratesArray, stacks):
-			letter = re.sub(r'[][\n ]', '', crate)
-			if letter != '':
-				print(letter, stack)
-				stack = stack + letter
-	print(stacks)
+		for i, crate in enumerate(unsortedCratesArray):
+			stacks[i] += re.sub(r'[][\n ]', '', crate)
 
+	movements = islice(allLines, 10, None)
+	for move in movements:
+		moveInfo = re.sub(r'[a-z]', '', move).split()
+		for i in range(0, int(moveInfo[0])):
+			startStackNum, endStackNum = int(moveInfo[1]) - 1, int(moveInfo[2]) - 1
+			letter = stacks[startStackNum][0]
+			stacks[startStackNum] = stacks[startStackNum][1:]
+			stacks[endStackNum] = letter + stacks[endStackNum]
 
-	# movements = islice(allLines, 10, None)
-	# for move in movements:
-	# 	print(move)
-
+	topCrates = ''
+	for stack in stacks:
+		topCrates += stack[0]
+	print(topCrates)
