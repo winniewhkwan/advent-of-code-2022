@@ -8,12 +8,12 @@ For those of you who don't know what Advent of Code is check it out [here](https
 
 ## Challenges
 
-| Day       |  Challenge               |  Bonus  |
-|:---------:| :----------------------: | :-----: |
-| [1](day1) |  [Solved](day1/day1.py)  |
+| Day       | Challenge                | Bonus                             |
+|:---------:| :----------------------: | :-------------------------------: |
+| [1](day1) |  [Solved](day1/day1.py)  | [In Progress](day1/day1_bonus.py) |
 | [2](day2) |  [Solved](day2/day2.py)  |
 | [5](day5) |  [Solved](day5/day5.py)  |
 | [3](day3) |  [Solved](day3/day3.py)  |
 | [4](day4) |  [Solved](day4/day4.py)  |
 | [6](day6) |  [Solved](day6/day6.py)  |
-| [7](day7) |  [Solving](day7/day7.py) |
+| [7](day7) |  [Paused](day7/day7.py)  |
