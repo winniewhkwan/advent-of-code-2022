@@ -12,16 +12,22 @@ with open('day1/test_input.txt') as file:
 		if line.strip():
 			current_count += int(line)
 		else:
-			if (len(highest_counts) > count_limit):
-
+			if (len(highest_counts) < count_limit):
+				is_added = False
+				for i, num in enumerate(highest_counts):
+					if current_count > num:
+						highest_counts.insert(i, current_count)
+						is_added = True
+						break
+				if (not(is_added)):
+					highest_counts.append(current_count)
+			else:
 				for i in range(0, len(highest_counts)):
 					if current_count > highest_counts[i]:
-						if (len(highest_counts) > count_limit):
-							highest_counts.insert(i, current_count)
-							highest_counts.pop()
-						else:
-							highest_counts.append(current_count)
+						highest_counts.insert(i, current_count)
+						highest_counts.pop()
 						break
+			current_count = 0
 
 print('Top three is', highest_counts)
 print('Highest number of calories being carried is', sum(highest_counts))
