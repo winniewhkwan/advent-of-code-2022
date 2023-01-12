@@ -10,7 +10,7 @@ For those of you who don't know what Advent of Code is check it out [here](https
 
 | Day       | Challenge                | Bonus                             |
 |:---------:| :----------------------: | :-------------------------------: |
-| [1](day1) |  [Solved](day1/day1.py)  | [In Progress](day1/day1_bonus.py) |
+| [1](day1) |  [Solved](day1/day1.py)  | [Solved](day1/day1_bonus.py) |
 | [2](day2) |  [Solved](day2/day2.py)  |
 | [5](day5) |  [Solved](day5/day5.py)  |
 | [3](day3) |  [Solved](day3/day3.py)  |
