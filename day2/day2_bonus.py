@@ -8,15 +8,11 @@ class OptionGuide(Enum):
 	B = 2 # Paper
 	C = 3 # Scissors
 
-class ResultGuide(Enum):
-	LOSS = 0,
-	DRAW = 1,
-	WIN = 2
-
+# [loss, draw, win]
 class ResultMap(Enum):
-	A = ['B', 'A', 'C']
-	B = ['C', 'B', 'A']
-	C = ['A', 'C', 'B']
+	A = ['C', 'A', 'B']
+	B = ['A', 'B', 'C']
+	C = ['B', 'C', 'A']
 
 def get_outcome(opponent_choice, result):
 	player_options = ResultMap[opponent_choice].value
@@ -24,7 +20,7 @@ def get_outcome(opponent_choice, result):
 	return OptionGuide[player_choice].value
 
 total_score = 0
-with open('day2/test_input.txt') as file:
+with open('day2/input.txt') as file:
 	all_lines = file.readlines()
 	for line in all_lines:
 		opponent, result = line.split()
@@ -41,4 +37,3 @@ with open('day2/test_input.txt') as file:
 		total_score += current_score
 
 print('Total score is', total_score)
-# 7951 is wrong :(
