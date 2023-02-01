@@ -4,14 +4,16 @@
 import re
 
 with open('day4/input.txt') as file:
-	allLines = file.readlines()
+	all_lines = file.readlines()
 	totalContainedPairs = 0
 
-	for line in allLines:
-		numArray = [int(num) for num in re.split(r'[,-]', line)]
+	for line in all_lines:
+		range_array = [int(num) for num in re.split(r'[,-]', line)]
 
-		if numArray[0] >= numArray[2] and numArray[1] <= numArray[3]\
-			or numArray[0] <= numArray[2] and numArray[1] >= numArray[3]:
+		num_array1 = set(range(range_array[0], range_array[1] + 1))
+		num_array2 = set(range(range_array[2], range_array[3] + 1))
+
+		if num_array1.issubset(num_array2) or num_array2.issubset(num_array1):
 				totalContainedPairs += 1
 
 	print('Total contained pairs are', totalContainedPairs)

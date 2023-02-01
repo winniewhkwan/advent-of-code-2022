@@ -8,14 +8,12 @@ with open('day4/input.txt') as file:
 	total_overlaps = 0
 
 	for line in all_lines:
-		num_array = [int(num) for num in re.split(r'[,-]', line)]
+		range_array = [int(num) for num in re.split(r'[,-]', line)]
 
-		# Also find a more interesting (better) way to solve this
+		num_array1 = set(range(range_array[0], range_array[1] + 1))
+		num_array2 = set(range(range_array[2], range_array[3] + 1))
 
-		if num_array[0] >= num_array[2] and num_array[0] <= num_array[3]\
-			or num_array[1] >= num_array[2] and num_array[1] <= num_array[3]\
-			or num_array[2] >= num_array[0] and num_array[2] <= num_array[1]\
-			or num_array[3] >= num_array[0] and num_array[3] <= num_array[1]:
+		if num_array1.intersection(num_array2):
 			total_overlaps += 1
 
 	print('Total overlaps are', total_overlaps)
