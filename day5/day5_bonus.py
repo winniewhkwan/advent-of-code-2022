@@ -4,20 +4,23 @@
 import re
 from itertools import islice
 
-num_stacks = 9
+# num_stacks = 9
+num_stacks = 3
 
-with open('day5/input.txt') as file:
+with open('day5/test_input.txt') as file:
 	all_lines = file.readlines()
-	stacks = [''] * 9
+	stacks = [''] * num_stacks
 
-	all_crates = islice(all_lines, 8)
+	# all_crates = islice(all_lines, 8)
+	all_crates = islice(all_lines, 3)
 	for unsorted_crates in all_crates:
 		unsorted_crates_array = [ unsorted_crates[i : i + 4] for i in range(0, len(unsorted_crates), 4) ]
 
 		for i, crate in enumerate(unsorted_crates_array):
 			stacks[i] += re.sub(r'[][\n ]', '', crate)
 
-	movements = islice(all_lines, 10, None)
+	# movements = islice(all_lines, 10, None)
+	movements = islice(all_lines, 5, None)
 	for move in movements:
 		move_info = re.sub(r'[a-z]', '', move).split()
 		for i in range(0, int(move_info[0])):
