@@ -14,6 +14,6 @@ For those of you who don't know what Advent of Code is check it out [here](https
 | [2](day2) |  [Solved](day2/day2.py)  | [Solved](day2/day2_bonus.py)      |
 | [3](day3) |  [Solved](day3/day3.py)  | [Solved](day3/day3_bonus.py)      |
 | [4](day4) |  [Solved](day4/day4.py)  | [Solved](day4/day4_bonus.py)      |
-| [5](day5) |  [Solved](day5/day5.py)  | [In Progress](day5/day5_bonus.py) |
+| [5](day5) |  [Solved](day5/day5.py)  | [Solved](day5/day5_bonus.py) |
 | [6](day6) |  [Solved](day6/day6.py)  |
 | [7](day7) |  [Paused](day7/day7.py)  |
